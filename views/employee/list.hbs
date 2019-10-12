@@ -1,0 +1,25 @@
+<table class="table table-striped">
+      <a href="/employee" class ="form-control">Create new record</a>
+    <thead>
+        <th>Name</th>
+        <th>email</th>
+        <th>mobile</th>
+        <th>city</th>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+        <td>{{this.Name}}</td>
+        <td>{{this.email}}</td>
+        <td>{{this.mobile}}</td>
+        <td>{{this.city}}</td>
+        <td>
+
+              <a href="/employee/{{this._id}}">Edit</a>
+              <a href="/employee/delete/{{this._id}}">delete</a>
+            
+        </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
